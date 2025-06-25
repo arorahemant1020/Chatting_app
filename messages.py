@@ -9,14 +9,14 @@ from django.contrib.auth.models import User
 from chatapp.models import Message  
 
 def seed():
-    hemant, _ = User.objects.get_or_create(username='hemant')
-    arjun, _ = User.objects.get_or_create(username='arjun')
+    u5, _ = User.objects.get_or_create(username='hemant')
+    u6, _ = User.objects.get_or_create(username='arjun')
 
-    Message.objects.create(sender=hemant, receiver=arjun, content="Hey Arjun!")
-    Message.objects.create(sender=arjun, receiver=hemant, content="Hey Hemant! What's up?")
-    Message.objects.create(sender=hemant, receiver=arjun, content="All good. Just testing our chat API.")
-    Message.objects.create(sender=arjun, receiver=hemant, content="Well that's great. Is it working?")
-    Message.objects.create(sender=hemant, receiver=arjun, content="It sure is working perfectly")
+    Message.objects.create(sender=u5, receiver=u6, content="Hey Arjun!")
+    Message.objects.create(sender=u6, receiver=u5, content="Hey Hemant! What's up?")
+    Message.objects.create(sender=u5, receiver=u6, content="All good. Just testing our chat API.")
+    Message.objects.create(sender=u6, receiver=u5, content="Well that's great. Is it working?")
+    Message.objects.create(sender=u5, receiver=u6, content="It sure is working perfectly")
 
     print("Messages seeded successfully.")
 
@@ -30,6 +30,16 @@ def seed():
     Message.objects.create(sender=u1, receiver=u2, content="I'm doing well Priya. What about you?")
     Message.objects.create(sender=u2, receiver=u1, content="I'm doing well too. Thanks for asking.")
     Message.objects.create(sender=u1, receiver=u2, content="Glad to hear that!")
+
+    print("Messages seeded successfully.")
+
+def seed():
+
+    u3, _ = User.objects.get_or_create(username='hemant')
+    u4, _ = User.objects.get_or_create(username='shubh')
+
+    Message.objects.create(sender=u3, receiver=u4, content="Hello Shubh! Welcome to our company.")
+    Message.objects.create(sender=u4, receiver=u3, content="Hey Hemant! Thank you for giving me the opportunity.")
 
     print("Messages seeded successfully.")
     
