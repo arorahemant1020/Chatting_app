@@ -1,0 +1,15 @@
+# created by virtualenv automatically
+
+chatenv/
+*.pyc
+__pycache__/
+db.sqlite3
+*.log
+*.pot
+*.py[cod]
+media/
+staticfiles/
+*.sqlite3
+.DS_Store
+.vscode/
+.idea/
